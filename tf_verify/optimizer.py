@@ -85,7 +85,6 @@ class Optimizer:
 
                 nn.weights.append(matrix)
                 nn.biases.append(bias)
-                nn.biases.append(bias)
                 nn.layertypes.append('FC')
                 nn.numlayer+= 1
                 #print("Gemm Matrix ", matrix)
