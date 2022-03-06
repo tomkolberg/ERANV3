@@ -509,6 +509,9 @@ if not is_trained_with_pytorch:
     elif dataset == "cifar10":
         means = [0.4914, 0.4822, 0.4465]
         stds = [0.2023, 0.1994, 0.2010]
+    elif dataset == "gtsrb":
+        means = [0, 0, 0]
+        stds = [1, 1, 1]
     else:
         means = [0.5, 0.5, 0.5]
         stds = [1, 1, 1]
