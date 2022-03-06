@@ -116,7 +116,7 @@ def normalize(image, means, stds, dataset):
     elif dataset == 'mnist'  or dataset == 'fashion':
         for i in range(len(image)):
             image[i] = (image[i] - means[0])/stds[0]
-    elif(dataset=='cifar10'):
+    elif(dataset=='cifar10' or dataset == 'gtsrb'):
         count = 0
         tmp = np.zeros(3072)
         for i in range(1024):
@@ -180,7 +180,7 @@ def denormalize(image, means, stds, dataset):
     if dataset == 'mnist'  or dataset == 'fashion':
         for i in range(len(image)):
             image[i] = image[i]*stds[0] + means[0]
-    elif(dataset=='cifar10'):
+    elif(dataset=='cifar10' or dataset == 'gtsrb'):
         count = 0
         tmp = np.zeros(3072)
         for i in range(1024):
@@ -436,7 +436,7 @@ elif not config.geometric:
 dataset = config.dataset
 
 if zonotope_bool==False:
-   assert dataset in ['mnist', 'cifar10', 'acasxu', 'fashion'], "only mnist, cifar10, acasxu, and fashion datasets are supported"
+   assert dataset in ['mnist', 'cifar10', 'acasxu', 'fashion', 'gtsrb'], "only mnist, cifar10, acasxu, and fashion datasets are supported"
 
 mean = 0
 std = 0
@@ -479,7 +479,7 @@ else:
         num_pixels = len(zonotope)
     elif(dataset=='mnist'):
         num_pixels = 784
-    elif (dataset=='cifar10'):
+    elif (dataset=='cifar10' or dataset == 'gtsrb'):
         num_pixels = 3072
     elif(dataset=='acasxu'):
         num_pixels = 5
