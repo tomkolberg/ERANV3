@@ -1,2 +1,22 @@
 43
-y0 notmax
+y0 max
+y1 max
+y2 max
+y3 max
+y4 max
+y5 max
+y6 max
+y7 max
+y8 max
+y9 max
+y10 max
+y11 max
+y12 max
+y13 max
+y14 max
+y15 max
+y16 max
+y17 max
+y18 max
+y19 max
+y20 max
