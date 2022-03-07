@@ -119,8 +119,6 @@ def normalize(image, means, stds, dataset):
     elif(dataset=='cifar10' or dataset == 'gtsrb'):
         count = 0
         tmp = np.zeros(3072)
-
-        print("YYYYYYYYYYYYYYYYYY" , len(image))
         for i in range(1024):
             tmp[count] = (image[count] - means[0])/stds[0]
             count = count + 1
@@ -1138,7 +1136,6 @@ elif config.input_box is not None:
     boxes = parse_input_box(tests)
     index = 1
     correct = 0
-    print("Boxes" , boxes)
     for box in boxes:
         specLB = [interval[0] for interval in box]
         specUB = [interval[1] for interval in box]
@@ -1152,7 +1149,7 @@ elif config.input_box is not None:
             print('constraints do NOT hold for box ' + str(index) + ' out of ' + str(sum([1 for b in boxes])))
 
         index += 1
-    print("XXXX" ,  tests)
+
     print('constraints hold for ' + str(correct) + ' out of ' + str(sum([1 for b in boxes])) + ' boxes')
 
 elif config.spatial:
