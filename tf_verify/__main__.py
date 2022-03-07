@@ -119,6 +119,7 @@ def normalize(image, means, stds, dataset):
     elif(dataset=='cifar10' or dataset == 'gtsrb'):
         count = 0
         tmp = np.zeros(3072)
+        print("YYYYYYYYYYYYYYYYYY" , image[0])
         for i in range(1024):
             tmp[count] = (image[count] - means[0])/stds[0]
             count = count + 1
