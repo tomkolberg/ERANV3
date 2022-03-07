@@ -43,7 +43,7 @@ def get_constraints_from_file(file):
     and_list = []
     lines = open(file, 'r').readlines()  # AND
     print("HAAAAAAAAAAAAAAALLLLLLLLLLLOOOOOOOOO")
-    print("jhasdljkadfsgajhdfg" , lines)
+    print("jhasdljkadfsgajhdfg" , lines[0])
     num_labels = int(lines[0])
     for index in range(1, len(lines)):
         elements = re.split(' +', lines[index])
