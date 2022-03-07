@@ -1150,6 +1150,7 @@ elif config.input_box is not None:
 
         index += 1
 
+    print("XXXXXXXXXXXXX" , str(boxes))
     print('constraints hold for ' + str(correct) + ' out of ' + str(sum([1 for b in boxes])) + ' boxes')
 
 elif config.spatial:
