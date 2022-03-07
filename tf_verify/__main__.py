@@ -1136,11 +1136,10 @@ elif config.input_box is not None:
     boxes = parse_input_box(tests)
     index = 1
     correct = 0
-    print("WWWWWWWWWW" , boxes)
+    print("Boxes" , boxes)
     for box in boxes:
         specLB = [interval[0] for interval in box]
         specUB = [interval[1] for interval in box]
-        print("YYYYYYYYYYYYY" , specUB , "________" , specLB)
         normalize(specLB, means, stds, dataset)
         normalize(specUB, means, stds, dataset)
         hold, nn, nlb, nub, _, _ = eran.analyze_box(specLB, specUB, domain, config.timeout_lp, config.timeout_milp, config.use_default_heuristic, constraints)
