@@ -1,2 +1,2 @@
 43
-y0 max
+y0 notmax
