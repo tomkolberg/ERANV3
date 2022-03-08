@@ -1139,8 +1139,11 @@ elif config.input_box is not None:
     for box in boxes:
         specLB = [interval[0] for interval in box]
         specUB = [interval[1] for interval in box]
-        print("WWWWWWWWWWWW" , normalize(specLB, means, stds, dataset))
+        normalize(specLB, means, stds, dataset)
         normalize(specUB, means, stds, dataset)
+
+        print("LB:  " , specLB)
+        print("UB:  ", specUB)
         hold, nn, nlb, nub, _, _ = eran.analyze_box(specLB, specUB, domain, config.timeout_lp, config.timeout_milp, config.use_default_heuristic, constraints)
         if hold:
             print('constraints hold for box ' + str(index) + ' out of ' + str(sum([1 for b in boxes])))
