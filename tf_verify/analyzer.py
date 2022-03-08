@@ -154,6 +154,7 @@ class Analyzer:
         self.partial_milp=partial_milp
         self.max_milp_neurons=max_milp_neurons
         self.approx_k = approx_k
+        print("YYYYYYYYY", label)
 
     def __del__(self):
         elina_manager_free(self.man)

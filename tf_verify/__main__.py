@@ -1136,7 +1136,6 @@ elif config.input_box is not None:
     boxes = parse_input_box(tests)
     index = 1
     correct = 0
-    print("XXXXXXXXXX" , len(constraints))
     for box in boxes:
         specLB = [interval[0] for interval in box]
         specUB = [interval[1] for interval in box]
