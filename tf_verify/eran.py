@@ -81,6 +81,7 @@ class ERAN:
         """
         assert domain in ['deepzono', 'refinezono', 'deeppoly', 'refinepoly'], "domain isn't valid, must be 'deepzono' or 'deeppoly'"
         specLB = np.reshape(specLB, (-1,))
+        print(specLB)
         specUB = np.reshape(specUB, (-1,))
         nn = layers()
         nn.specLB = specLB
