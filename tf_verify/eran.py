@@ -81,13 +81,13 @@ class ERAN:
         """
         assert domain in ['deepzono', 'refinezono', 'deeppoly', 'refinepoly'], "domain isn't valid, must be 'deepzono' or 'deeppoly'"
         specLB = np.reshape(specLB, (-1,))
-        print(specLB)
         specUB = np.reshape(specUB, (-1,))
         nn = layers()
         nn.specLB = specLB
         nn.specUB = specUB
         if domain == 'deepzono' or domain == 'refinezono':
             execute_list, output_info = self.optimizer.get_deepzono(nn,specLB, specUB)
+            print("_________" , output_constraints)
             analyzer = Analyzer(execute_list, nn, domain, timeout_lp, timeout_milp, output_constraints,
                                 use_default_heuristic, label, prop, testing, K=K, s=s,
                                 timeout_final_lp=timeout_final_lp, timeout_final_milp=timeout_final_milp,
