@@ -29,4 +29,6 @@ def read_zonotope(zonotope_file):
 
     zonotope = [np.float64(x) for x in zonotope[2:zonotope_width*zonotope_height+2]]
     zonotope = np.array(zonotope)
+    print("FILE GELESEN")
+    print(zonotope)
     return np.reshape(zonotope, (zonotope_height, zonotope_width))
