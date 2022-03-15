@@ -379,6 +379,7 @@ def handle_relu(model,var_list, affine_counter, num_neurons, lbi, ubi, relu_grou
     relu_counter = start
 
     cross_over_idx = list(np.nonzero(np.array(lbi)*np.array(ubi)<0)[0])
+    cross_over_idx = list(np.nonzero(np.array(lbi)*np.array(ubi)<0)[0])
     width = np.array(ubi) - np.array(lbi)
     cross_over_idx = sorted(cross_over_idx, key= lambda x: -width[x])
 
